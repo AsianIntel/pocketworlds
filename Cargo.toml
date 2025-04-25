@@ -1,0 +1,23 @@
+[package]
+name = "pocketworlds"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+axum = { version = "0.8", features = ["macros"] }
+base62 = { version = "2" }
+bson = { version = "2", features = ["chrono-0_4"] }
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+dotenvy = { version = "0" }
+futures-util = { version = "0" }
+mongodb = { version = "3" }
+redis = { version = "0.30", default-features = false, features = ["tokio-comp", "connection-manager", "keep-alive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1" }
+tracing = { version = "0" }
+tracing-subscriber = { version = "0", features = ["env-filter"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }
+tower = { version = "0.5" }
+tower-http = { version = "0.6", features = ["trace"] }
+url = { version = "2", features = ["serde"] }
+uuid = { version = "1", features = ["v5"] }
